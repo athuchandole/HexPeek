@@ -19,7 +19,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         navigator.clipboard.writeText(color).then(() => {
           // Change button text
           const originalText = button.textContent;
-          button.textContent = "Copied ✅";
+          button.textContent = "Copied!";
           button.disabled = true;
 
           // Revert after 1.5 seconds
