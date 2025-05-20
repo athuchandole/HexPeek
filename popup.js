@@ -57,9 +57,18 @@ function extractColors() {
 // Theme toggle
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
+const icon = themeToggle.querySelector('i');
 
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('dark');
-  themeToggle.textContent = body.classList.contains('dark') ? 'Day' : 'Night';
+  if (body.classList.contains('dark')) {
+    icon.classList.replace('fa-moon', 'fa-sun');
+  } else {
+    icon.classList.replace('fa-sun', 'fa-moon');
+  }
 });
 
+// About button click
+document.getElementById('about').addEventListener('click', () => {
+  chrome.tabs.create({ url: 'https://athuchandole.github.io/portfolio/' });
+});

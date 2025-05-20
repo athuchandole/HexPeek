@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Page Colors</title>
   <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
   <div class="header">
-    <img src="./icon.png" alt="Icon" class="logo">
-    <button id="themeToggle" title="Toggle Light/Dark Mode">Theme</button>
+    <img src="./hexpeekpngll.png" alt="Icon" class="logo">
+    <div class="header-actions">
+      <button id="themeToggle" title="Toggle Light/Dark Mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      <span id="about" title="About"><i class="fas fa-circle-info"></i></span>
+    </div>
   </div>
-
+  <div class="section-info">
+    <hr>
+    <h2>Colors Detected</h2>
+    <p class="subtext">from web page detect is colors</p>
+    <hr>
+  </div>
   <div id="colorList"></div>
 
-  <div class="footer">Develop by ABC</div>
+  <div class="footer">Develop by athuchandole</div>
 
   <script src="popup.js"></script>
 </body>
+
 </html>
